@@ -13,6 +13,11 @@ export default function OAuth() {
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup(auth, provider)
     const user = result.user
+
+
+
+
+    
     //Check for the user
     const docRef = doc(db, "users", user.uid)
     const docSnap = await getDoc(docRef)
